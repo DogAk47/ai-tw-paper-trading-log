@@ -1,0 +1,58 @@
+{
+  "schema_version": "public-daily-snapshot-v1",
+  "market_date": "2026-07-22",
+  "generated_at": "2026-07-22T13:00:00Z",
+  "run_status": "COMPLETED",
+  "reason_code": null,
+  "status_message": "範例資料：今日分析已完成，沒有買進或賣出。",
+  "metadata": {
+    "product_version": "1.5.1",
+    "prompt_version": "sample-prompt-v1",
+    "strategy_version": "sample-strategy-v1",
+    "model_label": "sample-only",
+    "privacy_profile": "redacted-v1",
+    "source_data_dates": ["2026-07-22"]
+  },
+  "decision": {
+    "portfolio_view": "neutral",
+    "actions": [
+      {
+        "symbol": "TEST1",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.62,
+        "thesis": "這是版面測試資料，等待更多可驗證條件。",
+        "invalidation_conditions": ["範例論點不再成立"],
+        "risk_flags": ["僅供版面測試"]
+      }
+    ],
+    "portfolio_summary": "這是靜態模板範例，不代表真實市場、持倉或 AI 決策。",
+    "no_trade_reason": "目前顯示的是範例資料，因此沒有任何模擬買進或賣出。"
+  },
+  "watch_candidates": [
+    {
+      "rank": 1,
+      "symbol": "TEST1",
+      "observation_reason": "用來檢查觀望清單的文字密度與欄位對齊。",
+      "missing_buy_conditions": ["等待真實匯出資料"],
+      "risk_flags": ["非真實標的"],
+      "invalidation_conditions": ["模板驗證完成"]
+    },
+    {
+      "rank": 2,
+      "symbol": "TEST2",
+      "observation_reason": "用來檢查多列資料與窄螢幕排列。",
+      "missing_buy_conditions": ["等待真實匯出資料", "確認發布範圍"],
+      "risk_flags": [],
+      "invalidation_conditions": ["模板驗證完成"]
+    }
+  ],
+  "analysis": {
+    "market": "這是市場分析區的版面測試文字，用來確認一般資訊不會被包裝成警告卡片。",
+    "portfolio": "這是投資組合分析區的範例，不含真實金額或持股。",
+    "financial": "這是財務分析區的範例，不代表任何公司財報。",
+    "risk": "目前唯一風險是頁面仍使用範例資料，不能視為投資結論。",
+    "next_session_plan": "模板確認後，再以手動匯出的安全 JSON 進行下一階段驗證。",
+    "data_gaps": ["尚未接入真實公開快照", "尚未建立 GitHub 發布流程"]
+  }
+}

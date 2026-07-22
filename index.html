@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>AI 臺股紙上投資觀察</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="research-page" aria-labelledby="page-title">
+      <header class="page-header">
+        <p class="eyebrow">PAPER TRADING RESEARCH LOG</p>
+        <div class="title-row">
+          <div>
+            <h1 id="page-title">AI 臺股紙上投資觀察</h1>
+            <p class="lede">每日決策、觀望理由與資料狀態的唯讀紀錄。</p>
+          </div>
+          <div class="run-state" aria-live="polite">
+            <span id="run-status" class="status-label">載入中</span>
+            <time id="market-date">—</time>
+          </div>
+        </div>
+        <dl id="metadata" class="metadata" aria-label="報告資訊"></dl>
+      </header>
+
+      <section class="status-section" aria-labelledby="status-heading">
+        <h2 id="status-heading">本次結果</h2>
+        <p id="status-message" class="status-message">正在讀取最新資料。</p>
+        <p id="no-trade-reason" class="no-trade-reason" hidden></p>
+      </section>
+
+      <div id="completed-content" hidden>
+        <section class="summary-section" aria-labelledby="summary-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">DECISION</p>
+              <h2 id="summary-heading">模擬操作</h2>
+            </div>
+            <span id="portfolio-view" class="quiet-value">—</span>
+          </div>
+          <p id="portfolio-summary" class="editorial-copy"></p>
+          <div class="table-shell">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">股票代號</th>
+                  <th scope="col">動作</th>
+                  <th scope="col">張數</th>
+                  <th scope="col">信心</th>
+                  <th scope="col">理由</th>
+                </tr>
+              </thead>
+              <tbody id="actions-body"></tbody>
+            </table>
+          </div>
+          <p id="actions-empty" class="empty-line" hidden>本日沒有個別標的動作。</p>
+        </section>
+
+        <section class="analysis-section" aria-labelledby="analysis-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">ANALYSIS</p>
+              <h2 id="analysis-heading">研究摘要</h2>
+            </div>
+          </div>
+          <dl id="analysis-grid" class="analysis-grid"></dl>
+        </section>
+
+        <section class="watch-section" aria-labelledby="watch-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">WATCHLIST</p>
+              <h2 id="watch-heading">AI 優先觀望</h2>
+            </div>
+            <span id="watch-count" class="quiet-value">0 檔</span>
+          </div>
+          <div class="table-shell">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">排名</th>
+                  <th scope="col">股票代號</th>
+                  <th scope="col">觀望理由</th>
+                  <th scope="col">尚缺條件</th>
+                  <th scope="col">風險</th>
+                </tr>
+              </thead>
+              <tbody id="watch-body"></tbody>
+            </table>
+          </div>
+          <p id="watch-empty" class="empty-line" hidden>本次沒有優先觀望標的。</p>
+        </section>
+
+        <section class="gaps-section" aria-labelledby="gaps-heading">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">DATA QUALITY</p>
+              <h2 id="gaps-heading">資料缺口</h2>
+            </div>
+          </div>
+          <ul id="data-gaps" class="plain-list"></ul>
+          <p id="gaps-empty" class="empty-line" hidden>本次沒有另外標示的資料缺口。</p>
+        </section>
+      </div>
+
+      <section id="load-error" class="load-error" hidden aria-live="assertive">
+        <h2>資料無法顯示</h2>
+        <p>最新公開資料不存在或格式不正確，頁面沒有使用舊資料替代。</p>
+      </section>
+
+      <footer>
+        <span>完全模擬投資・不連接券商・不送出真實委託</span>
+        <span id="generated-at">更新時間 —</span>
+      </footer>
+    </main>
+  </body>
+</html>
