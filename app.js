@@ -1,6 +1,7 @@
 "use strict";
 
 const DATA_URL = "data/latest.json";
+const SUPPORTED_SCHEMA_VERSION = "public-daily-snapshot-v1";
 
 function byId(id) {
   return document.getElementById(id);
@@ -38,6 +39,12 @@ function formatList(values) {
   return Array.isArray(values) && values.length ? values.join("；") : "—";
 }
 
+function securityLabel(item) {
+  const label =
+    typeof item?.security_label === "string" ? item.security_label.trim() : "";
+  return label || item?.symbol || "—";
+}
+
 function appendCell(row, label, value, kind, action) {
   const cell = document.createElement("td");
   cell.dataset.label = label;
@@ -70,7 +77,7 @@ function renderActions(decision) {
   byId("actions-empty").hidden = actions.length !== 0;
   for (const action of actions) {
     const row = document.createElement("tr");
-    appendCell(row, "股票代號", action.symbol, "symbol");
+    appendCell(row, "標的", securityLabel(action), "symbol");
     appendCell(row, "動作", action.action, "action", action.action);
     appendCell(row, "張數", String(action.target_lots));
     appendCell(row, "信心", `${Math.round(action.confidence * 100)}%`);
@@ -101,7 +108,7 @@ function renderWatchCandidates(candidates) {
   for (const candidate of rows) {
     const row = document.createElement("tr");
     appendCell(row, "排名", String(candidate.rank));
-    appendCell(row, "股票代號", candidate.symbol, "symbol");
+    appendCell(row, "標的", securityLabel(candidate), "symbol");
     appendCell(row, "觀望理由", candidate.observation_reason);
     appendCell(row, "尚缺條件", formatList(candidate.missing_buy_conditions));
     appendCell(row, "風險", formatList(candidate.risk_flags));
@@ -148,6 +155,9 @@ async function loadSnapshot() {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const snapshot = await response.json();
+    if (snapshot?.schema_version !== SUPPORTED_SCHEMA_VERSION) {
+      throw new Error("Unsupported public snapshot schema");
+    }
     renderSnapshot(snapshot);
   } catch (error) {
     console.error("Public snapshot could not be loaded", error);
