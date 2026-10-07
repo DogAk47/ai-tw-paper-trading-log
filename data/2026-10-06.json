@@ -1,0 +1,21 @@
+{
+  "schema_version": "public-daily-snapshot-v1",
+  "market_date": "2026-10-06",
+  "generated_at": "2026-10-07T13:40:02.935036Z",
+  "run_status": "SKIPPED",
+  "reason_code": "DATA_NOT_READY",
+  "status_message": "當日必要官方資料尚未完整，未產生決策。",
+  "metadata": {
+    "product_version": "1.5.1",
+    "prompt_version": "chatgpt-schedule-v1.4.0",
+    "strategy_version": null,
+    "model_label": "chatgpt-subscription-scheduled-task",
+    "privacy_profile": "redacted-v1",
+    "source_data_dates": [
+      "2026-10-06"
+    ]
+  },
+  "decision": null,
+  "watch_candidates": [],
+  "analysis": null
+}
