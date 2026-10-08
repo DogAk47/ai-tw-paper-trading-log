@@ -1,21 +1,218 @@
 {
   "schema_version": "public-daily-snapshot-v1",
-  "market_date": "2026-10-06",
-  "generated_at": "2026-10-07T13:40:02.935036Z",
-  "run_status": "SKIPPED",
-  "reason_code": "DATA_NOT_READY",
-  "status_message": "當日必要官方資料尚未完整，未產生決策。",
+  "market_date": "2026-10-08",
+  "generated_at": "2026-10-08T13:40:02.427085Z",
+  "run_status": "COMPLETED",
+  "reason_code": null,
+  "status_message": "今日分析已完成，產生 1 筆模擬買賣決策。",
   "metadata": {
     "product_version": "1.5.1",
     "prompt_version": "chatgpt-schedule-v1.4.0",
-    "strategy_version": null,
-    "model_label": "chatgpt-subscription-scheduled-task",
+    "strategy_version": "strategy-v1.0",
+    "model_label": "chatgpt_subscription|chatgpt-subscription-scheduled-task|scheduled-analysis-output-v1",
     "privacy_profile": "redacted-v1",
     "source_data_dates": [
-      "2026-10-06"
+      "2026-10-08"
     ]
   },
-  "decision": null,
-  "watch_candidates": [],
-  "analysis": null
+  "decision": {
+    "portfolio_view": "neutral",
+    "actions": [
+      {
+        "symbol": "1815",
+        "security_short_name": "富喬",
+        "security_label": "富喬（1815）",
+        "action": "BUY",
+        "target_lots": 1,
+        "confidence": 0.72,
+        "thesis": "富喬（1815）已由輸入確認為合格普通股並觀察 6 個交易日，超過 strategy-v1.0 的 3 日門檻。2026 年 8 月營收月增 6.79%、年增 79.21%、累計年增 51.20%，2026 年第二季財務完整，營業利益、淨利與 EPS ［數值已隱藏］ 均為正；本日上漲 1.89%，不構成追逐 8% 以上單日波動。按收盤價估算 1 張名目金額約 ［精確金額已隱藏］，占 NAV 6.75%，即使保留既有聯電（2303）PENDING 資金後仍有充足可用現金，因此提出 1 張 PAPER BUY，最終須通過正式 Strategy、Risk、資金與資格驗證。",
+        "invalidation_conditions": [
+          "後續月營收年增率或累計年增率轉負，或月營收趨勢明顯惡化",
+          "後續季度營業利益、淨利或 EPS 顯著惡化或轉負",
+          "正式 Strategy、Risk、商品資格、價格或可用資金驗證未通過",
+          "後續資料顯示產業 28 曝險或單一持股權重超過現行限制"
+        ],
+        "risk_flags": [
+          "沒有可比較的前次決策",
+          "輸入未提供估值、毛利率或多日價格趨勢",
+          "單日市場下跌家數多於上漲家數",
+          "既有聯電（2303）PENDING 紙上委託仍占用保留資金"
+        ]
+      },
+      {
+        "symbol": "2303",
+        "security_short_name": "聯電",
+        "security_label": "聯電（2303）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.96,
+        "thesis": "聯電（2303）已觀察 37 個交易日，2026 年 8 月營收月增 5.04%、年增 30.71%、累計年增 14.66%，第二季 EPS ［數值已隱藏］，前次正向基本面論點未被本次資料推翻。但帳戶已存在 1 張 PENDING PAPER BUY 並保留 ［精確金額已隱藏］；PENDING 不代表可執行資格，本次不新增、不終止、不釋放也不改寫該委託，因此維持 HOLD。",
+        "invalidation_conditions": [
+          "後續月營收年增率或累計年增率轉負",
+          "後續季度 EPS、營業利益或淨利顯著惡化",
+          "正式帳務顯示既有委託已合法終結，且新的完整資料支持重新評估"
+        ],
+        "risk_flags": [
+          "已有 1 張 PENDING PAPER order，不得重複建立曝險",
+          "輸入未提供估值與多日價格趨勢",
+          "產業 24 候選集中"
+        ]
+      },
+      {
+        "symbol": "2344",
+        "security_short_name": "華邦電",
+        "security_label": "華邦電（2344）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.87,
+        "thesis": "華邦電（2344）已觀察 36 個交易日，2026 年 8 月營收月增 2.00%、年增 289.43%、累計年增 177.39%，第二季 EPS ［數值已隱藏］ 且營業利益與淨利為正，延續 2026-09-21 的正向基本面觀察。本次仍缺少極高成長的基期說明、估值與多日趨勢，且已有同屬產業 24 的聯電（2303）PENDING 曝險，因此不提出第二筆同產業買進並維持 HOLD。",
+        "invalidation_conditions": [
+          "後續營收成長快速轉弱或轉負",
+          "後續季度獲利能力顯著惡化",
+          "取得可驗證的基期、估值與多日趨勢後推翻目前觀望理由",
+          "既有產業 24 委託合法終結且新資料支持重新配置"
+        ],
+        "risk_flags": [
+          "極高成長可能受基期影響但原因未提供",
+          "缺少估值與多日價格趨勢",
+          "產業 24 候選集中且已有同產業 PENDING 曝險"
+        ]
+      },
+      {
+        "symbol": "0050",
+        "security_short_name": "元大台灣50",
+        "security_label": "元大台灣50（0050）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.82,
+        "thesis": "元大台灣50（0050）由輸入確認為合格臺灣股票型被動 ETF，已觀察 18 個交易日，按收盤價估算 1 張名目金額約占 NAV 5.75% 且可負擔。相較 2026-09-21 的前次 HOLD，本次仍未提供折溢價、追蹤誤差、成分曝險或多日趨勢，也沒有 COMPLETE 月度反思或足以依 strategy-v1.0 改變核心策略的新證據，因此維持 HOLD。",
+        "invalidation_conditions": [
+          "官方分類不再符合臺灣股票型、非槓桿且非反向範圍",
+          "取得折溢價、追蹤誤差與成分曝險後改變分散效果判斷",
+          "後續出現符合現行策略的可驗證新證據"
+        ],
+        "risk_flags": [
+          "缺少 ETF 折溢價與追蹤誤差",
+          "缺少成分曝險與多日價格趨勢",
+          "月度反思樣本不足，不能形成策略結論"
+        ]
+      }
+    ],
+    "portfolio_summary": "本次提出富喬（1815）1 張 PAPER BUY，理由是觀察日數、營收成長、完整季度獲利與部位規模同時符合目前輸入可驗證條件；正式程式仍須核對 Strategy、Risk、資格、價格與資金。聯電（2303）既有 PENDING PAPER order 保持原狀，本次不新增或處理；華邦電（2344）因基期、估值、多日趨勢與同產業曝險仍不足而 HOLD；元大台灣50（0050）因缺 ETF 專屬研究欄位而 HOLD。若 BUY 通過，1 張富喬名目金額約 ［精確金額已隱藏］，占 NAV 6.75%，與既有保留資金並存後仍維持高現金比例；若任一必要資料或正式驗證不通過，應安全拒絕該提案而非改量或猜測。",
+    "no_trade_reason": null
+  },
+  "watch_candidates": [
+    {
+      "rank": 1,
+      "symbol": "1815",
+      "security_short_name": "富喬",
+      "security_label": "富喬（1815）",
+      "observation_reason": "富喬（1815）營收月增、年增與累計年增均為正，第二季營業利益、淨利與 EPS 為正，且 1 張部位約占 NAV 6.75%，是本次最接近可執行條件的研究標的。",
+      "missing_buy_conditions": [
+        "通過正式 Strategy、Risk、資格、價格與可用資金驗證",
+        "後續取得估值與多日價格趨勢以確認買進後續持有條件"
+      ],
+      "risk_flags": [
+        "沒有前次決策可比較",
+        "市場廣度略偏弱",
+        "缺少估值與多日趨勢"
+      ],
+      "invalidation_conditions": [
+        "營收成長轉負或季度獲利顯著惡化",
+        "正式風控拒絕或必要資料不完整"
+      ]
+    },
+    {
+      "rank": 2,
+      "symbol": "2344",
+      "security_short_name": "華邦電",
+      "security_label": "華邦電（2344）",
+      "observation_reason": "華邦電（2344）的 8 月營收年增 289.43%、累計年增 177.39%，第二季獲利為正，基本面動能強但目前資料不足以釐清高基期效應與合理估值。",
+      "missing_buy_conditions": [
+        "取得極高營收成長的基期說明",
+        "取得估值與多日價格趨勢",
+        "確認同產業既有 PENDING 曝險合法終結或整體產業權重仍合適"
+      ],
+      "risk_flags": [
+        "產業 24 候選集中",
+        "高成長可能受基期影響"
+      ],
+      "invalidation_conditions": [
+        "營收成長快速轉弱或季度獲利顯著惡化"
+      ]
+    },
+    {
+      "rank": 3,
+      "symbol": "2303",
+      "security_short_name": "聯電",
+      "security_label": "聯電（2303）",
+      "observation_reason": "聯電（2303）營收與季度獲利維持正向，但已有 1 張 PENDING PAPER order；本次只追蹤其基本面與正式訂單結果，不建立重複曝險。",
+      "missing_buy_conditions": [
+        "既有 PENDING order 依正式契約合法終結後才能重新評估",
+        "取得估值與多日價格趨勢"
+      ],
+      "risk_flags": [
+        "PENDING 不代表具備執行資格",
+        "同產業候選集中"
+      ],
+      "invalidation_conditions": [
+        "營收或季度獲利顯著惡化",
+        "正式帳務或訂單狀態與輸入不一致"
+      ]
+    },
+    {
+      "rank": 4,
+      "symbol": "0050",
+      "security_short_name": "元大台灣50",
+      "security_label": "元大台灣50（0050）",
+      "observation_reason": "元大台灣50（0050）是輸入確認的合格臺灣股票型被動 ETF，單張規模可負擔且可作分散研究，但目前缺少 ETF 專屬品質與曝險資料。",
+      "missing_buy_conditions": [
+        "取得折溢價、追蹤誤差與成分曝險",
+        "取得足以依現行策略改變前次 HOLD 的新證據"
+      ],
+      "risk_flags": [
+        "缺少 ETF 專屬研究欄位",
+        "月度反思仍為樣本不足"
+      ],
+      "invalidation_conditions": [
+        "官方商品分類不再符合允許範圍"
+      ]
+    },
+    {
+      "rank": 5,
+      "symbol": "6147",
+      "security_short_name": "頎邦",
+      "security_label": "頎邦（6147）",
+      "observation_reason": "頎邦（6147）已觀察 12 個交易日，8 月營收月增 3.85%、年增 43.61%、累計年增 23.86%，第二季獲利為正且 1 張名目金額低於單一持股上限。",
+      "missing_buy_conditions": [
+        "取得估值與多日價格趨勢",
+        "在市場廣度偏弱時確認價格止穩與風險報酬"
+      ],
+      "risk_flags": [
+        "本日下跌 2.38%",
+        "缺少估值與多日趨勢",
+        "產業 24 曝險已有 PENDING 委託"
+      ],
+      "invalidation_conditions": [
+        "營收成長轉負或季度獲利顯著惡化"
+      ]
+    }
+  ],
+  "analysis": {
+    "market": "2026-10-08 有 1,956 檔交易、22 檔無交易，上漲 784、下跌 962、平盤 210，下跌家數多於上漲家數，市場廣度略偏弱；全市場成交值為 ［精確金額已隱藏］。成交值候選只代表流動性觀察池，不是 AI 買進意向。前十大強勢產業中，TWSE 產業 21、03、22 與部分 TPEx 產業相對偏強，但輸入只提供產業代碼，不能延伸推測產業名稱或事件。市場環境判定為 neutral，允許小部位、可驗證的紙上提案，但不支持追價或大幅集中。",
+    "portfolio": "帳戶現金 ［精確金額已隱藏］、NAV ［精確金額已隱藏］、無持股、回撤 0；既有聯電（2303）1 張 PENDING PAPER BUY 保留 ［精確金額已隱藏］，使可用現金為 ［精確金額已隱藏］。該 PENDING 只是一項既有義務，不代表可執行資格，本次不處理、終止或重複建立。富喬（1815）1 張按收盤價約 ［精確金額已隱藏］，占 NAV 6.75%；若正式接受，仍可維持遠高於 10% 的最低現金比例，單一持股也低於 15% 上限。帳戶目前沒有可提出 SELL 的持股。",
+    "financial": "30 檔候選中有 29 檔提供月營收與季度財務，覆蓋率 96.7%；元大台灣50（0050）沒有公司型月營收與季度財報。富喬（1815）8 月營收月增 6.79%、年增 79.21%、累計年增 51.20%，第二季營業利益 949,554、淨利 1,300,461、EPS ［數值已隱藏］，支持小部位 BUY 研究提案。華邦電（2344）營收成長更高且 EPS ［數值已隱藏］，但缺少基期說明、估值與多日趨勢，且已有同產業 PENDING 曝險，維持 HOLD。聯電（2303）營收與獲利維持正向但已有待執行義務；元大台灣50（0050）則因缺少折溢價、追蹤誤差與成分曝險而不改變前次 HOLD。",
+    "risk": "主要風險包括市場下跌家數多於上漲家數、候選池集中於產業 24／28、輸入沒有估值與多日趨勢，以及既有聯電（2303）PENDING 資金義務。富喬（1815）BUY 以 1 張限制名目曝險，沒有融資、放空、當沖或衍生商品；正式 Strategy／Risk 若發現資格、價格、集中度、帳務或資金不符，必須拒絕而不是縮量或繞過。8 月月度反思 14／15 日、9 月該週反思 2／3 日，狀態皆為 INSUFFICIENT_DATA，因此不形成策略變更，繼續使用 strategy-v1.0／portfolio-v1.0。",
+    "next_session_plan": "下一交易日先觀察正式 accept 對富喬（1815）提案的 Strategy／Risk 結果；若建立 PAPER order，只記錄結果，不由本分析執行 Executor、continuation、settlement 或 reservation release。持續核對富喬後續營收與獲利是否維持、是否取得估值與多日趨勢；追蹤聯電（2303）既有 PENDING 狀態但不改寫；對華邦電（2344）等待基期與估值證據；對元大台灣50（0050）等待折溢價、追蹤誤差與成分曝險。若必要官方資料、資格、帳務或價格不完整，應安全停止，不能將資料失敗補成 AI HOLD。",
+    "data_gaps": [
+      "輸入未提供候選股估值指標，無法判斷目前價格相對基本面的便宜或昂貴程度",
+      "輸入只提供單日開收盤與漲跌幅，未提供多日價格、波動或量價趨勢",
+      "元大台灣50（0050）缺少 ETF 折溢價、追蹤誤差與成分曝險",
+      "元大台灣50（0050）沒有月營收與季度財報；此為 ETF 研究缺口，不將缺失內容描述為已知",
+      "華邦電（2344）與南亞科（2408）的高營收年增缺少基期原因說明",
+      "產業只提供代碼，未提供產業名稱、估值或完整產業基本面",
+      "8 月月度反思只有 14 個完整交易日，狀態為 INSUFFICIENT_DATA，不能形成月度策略結論",
+      "9 月最近週反思只有 2 個完整交易日，狀態為 INSUFFICIENT_DATA，不能形成週度策略結論"
+    ]
+  }
 }
