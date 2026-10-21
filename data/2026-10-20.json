@@ -1,0 +1,21 @@
+{
+  "schema_version": "public-daily-snapshot-v1",
+  "market_date": "2026-10-20",
+  "generated_at": "2026-10-21T15:40:04.184947Z",
+  "run_status": "SKIPPED",
+  "reason_code": "MISSED",
+  "status_message": "已錯過決策期限；未完成分析不代表 AI 主動 HOLD。",
+  "metadata": {
+    "product_version": "1.5.1",
+    "prompt_version": null,
+    "strategy_version": null,
+    "model_label": null,
+    "privacy_profile": "redacted-v1",
+    "source_data_dates": [
+      "2026-10-20"
+    ]
+  },
+  "decision": null,
+  "watch_candidates": [],
+  "analysis": null
+}
