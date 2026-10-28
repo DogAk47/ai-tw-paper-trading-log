@@ -1,10 +1,10 @@
 {
   "schema_version": "public-daily-snapshot-v1",
-  "market_date": "2026-10-23",
-  "generated_at": "2026-10-27T15:40:04.172865Z",
-  "run_status": "SKIPPED",
-  "reason_code": "MISSED",
-  "status_message": "已錯過決策期限；未完成分析不代表 AI 主動 HOLD。",
+  "market_date": "2026-10-28",
+  "generated_at": "2026-10-28T15:40:03.663655Z",
+  "run_status": "FAILED",
+  "reason_code": "ANALYSIS_NOT_COMPLETE",
+  "status_message": "尚無已接受的排程分析；未完成分析不代表 AI 主動 HOLD。",
   "metadata": {
     "product_version": "1.5.1",
     "prompt_version": null,
@@ -12,7 +12,7 @@
     "model_label": null,
     "privacy_profile": "redacted-v1",
     "source_data_dates": [
-      "2026-10-23"
+      "2026-10-28"
     ]
   },
   "decision": null,
