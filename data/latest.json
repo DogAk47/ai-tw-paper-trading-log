@@ -1,7 +1,7 @@
 {
   "schema_version": "public-daily-snapshot-v1",
-  "market_date": "2026-10-28",
-  "generated_at": "2026-10-28T15:40:03.663655Z",
+  "market_date": "2026-10-29",
+  "generated_at": "2026-10-29T15:40:03.780144Z",
   "run_status": "FAILED",
   "reason_code": "ANALYSIS_NOT_COMPLETE",
   "status_message": "尚無已接受的排程分析；未完成分析不代表 AI 主動 HOLD。",
@@ -12,7 +12,7 @@
     "model_label": null,
     "privacy_profile": "redacted-v1",
     "source_data_dates": [
-      "2026-10-28"
+      "2026-10-29"
     ]
   },
   "decision": null,
