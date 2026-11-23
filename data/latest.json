@@ -1,21 +1,606 @@
 {
   "schema_version": "public-daily-snapshot-v1",
-  "market_date": "2026-11-20",
-  "generated_at": "2026-11-20T15:40:04.853357Z",
-  "run_status": "FAILED",
-  "reason_code": "ANALYSIS_NOT_COMPLETE",
-  "status_message": "流程停止或狀態未確認；未完成分析不代表 AI 主動 HOLD。",
+  "market_date": "2026-11-23",
+  "generated_at": "2026-11-23T15:40:06.623603Z",
+  "run_status": "COMPLETED",
+  "reason_code": null,
+  "status_message": "今日分析已完成，產生 1 筆模擬買賣決策。 公司事件採有限偵測，未保證完整覆蓋；漏判可能使紙上績效暫時失真。發現帳務疑慮後，結果須待查，不得作為可信績效或策略改善證據。",
   "metadata": {
     "product_version": "1.5.1",
-    "prompt_version": null,
-    "strategy_version": null,
-    "model_label": null,
+    "prompt_version": "chatgpt-open-v1.6",
+    "strategy_version": "strategy-ai-v1.0",
+    "model_label": "chatgpt_subscription|chatgpt-subscription-scheduled-task|scheduled-analysis-output-v1",
     "privacy_profile": "redacted-v1",
     "source_data_dates": [
-      "2026-11-20"
+      "2026-11-23"
     ]
   },
-  "decision": null,
-  "watch_candidates": [],
-  "analysis": null
+  "decision": {
+    "portfolio_view": "neutral",
+    "actions": [
+      {
+        "symbol": "2330",
+        "security_short_name": "台積電",
+        "security_label": "台積電（2330）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.97,
+        "thesis": "台積電（2330）9月營收年增54.65%，延續正向研究。前次收盤估算一張含費已超出可用現金，本次收2030元，一張本金203萬元，資金缺口擴大。",
+        "invalidation_conditions": [
+          "含費整張可負擔，且估值與單一持股曝險支持配置"
+        ],
+        "risk_flags": [
+          "收盤估算超出現金",
+          "單張曝險接近全帳戶"
+        ]
+      },
+      {
+        "symbol": "2454",
+        "security_short_name": "聯發科",
+        "security_label": "聯發科（2454）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "聯發科（2454）本日漲10%，一張本金由前次335萬元升至368.5萬元，仍超出可用現金。封存9月營收月減13.69%，維持觀望。",
+        "invalidation_conditions": [
+          "含費整張可負擔，且新營收顯示動能改善"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "單日漲10%"
+        ]
+      },
+      {
+        "symbol": "0050",
+        "security_short_name": "元大台灣50",
+        "security_label": "元大台灣50（0050）",
+        "action": "BUY",
+        "target_lots": 1,
+        "confidence": 0.72,
+        "thesis": "元大台灣50（0050）前次因市場普跌與基金曝險、定價待查而觀望。本日上漲家數由66增至1217、下跌家數由1881降至619。採合格被動台股ETF建立小額市場曝險，收盤估一張本金8.7萬元、占淨值4.35%。成分與折溢價仍待查，本次配置以一張為限。",
+        "invalidation_conditions": [
+          "正式開盤資格、交易狀態、帳務或含費資金檢查未通過",
+          "後續基金資料顯示成分集中或定價偏離超出小額配置可承受範圍",
+          "後續市場廣度再度急遽轉弱，重新評估持有理由"
+        ],
+        "risk_flags": [
+          "成分權重與折溢價未提供",
+          "廣度改善僅一日",
+          "次日開盤有跳空風險"
+        ]
+      },
+      {
+        "symbol": "3443",
+        "security_short_name": "創意",
+        "security_label": "創意（3443）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "創意（3443）9月營收年增97.78%。一張本金由前次728.5萬元降至512萬元，仍超出可用現金，維持觀望。",
+        "invalidation_conditions": [
+          "含費整張可負擔且估值支持配置"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足"
+        ]
+      },
+      {
+        "symbol": "2308",
+        "security_short_name": "台達電",
+        "security_label": "台達電（2308）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.93,
+        "thesis": "台達電（2308）9月營收年增14.61%，本日漲10%，一張占淨值由45%升至49.5%，前次集中風險加重。",
+        "invalidation_conditions": [
+          "單張曝險下降且估值支持建倉"
+        ],
+        "risk_flags": [
+          "單張接近半數淨值",
+          "單日漲10%"
+        ]
+      },
+      {
+        "symbol": "1303",
+        "security_short_name": "南亞",
+        "security_label": "南亞（1303）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.85,
+        "thesis": "南亞（1303）9月營收年增55.26%，本日漲9.95%，一張占淨值由10.3%升至11.33%。第二季淨利仍約為營業利益2.80倍，維持前次對經常性獲利的查核要求。",
+        "invalidation_conditions": [
+          "獲利組成、經常性獲利與估值支持配置"
+        ],
+        "risk_flags": [
+          "獲利來源待拆解",
+          "單日大幅反彈"
+        ]
+      },
+      {
+        "symbol": "2303",
+        "security_short_name": "聯電",
+        "security_label": "聯電（2303）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.83,
+        "thesis": "聯電（2303）9月營收年增27.22%，本日漲9.96%，一張占淨值4.42%。前次關注的第二季稅前利益約為營業利益2.36倍，獲利結構仍需釐清。",
+        "invalidation_conditions": [
+          "獲利來源及估值支持配置",
+          "營收或本業獲利顯著轉弱"
+        ],
+        "risk_flags": [
+          "獲利來源待拆解",
+          "單日大幅反彈"
+        ]
+      },
+      {
+        "symbol": "2383",
+        "security_short_name": "台光電",
+        "security_label": "台光電（2383）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "台光電（2383）9月營收年增168.87%。本日漲9.96%，一張本金由前次281萬元升至309萬元，維持資金不足的判斷。",
+        "invalidation_conditions": [
+          "含費整張可負擔且估值支持配置"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "單日大幅反彈"
+        ]
+      },
+      {
+        "symbol": "3189",
+        "security_short_name": "景碩",
+        "security_label": "景碩（3189）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.88,
+        "thesis": "景碩（3189）9月營收年增44.47%，第二季EPS 3.74元。一張占淨值由前次45.50%升至23.38%應以本次收盤467.50元重算為23.38%，部位已縮小，仍暫緩集中配置。",
+        "invalidation_conditions": [
+          "估值與營運現金流足以支持單張配置"
+        ],
+        "risk_flags": [
+          "單張約占四分之一淨值"
+        ]
+      },
+      {
+        "symbol": "3037",
+        "security_short_name": "欣興",
+        "security_label": "欣興（3037）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.88,
+        "thesis": "欣興（3037）9月營收年增64.67%，一張占淨值由前次49.85%降至27.9%。集中風險下降，第二季淨利仍約為營業利益兩倍，暫緩配置。",
+        "invalidation_conditions": [
+          "獲利組成及估值支持承擔現有單張曝險"
+        ],
+        "risk_flags": [
+          "單張集中",
+          "獲利來源待拆解"
+        ]
+      },
+      {
+        "symbol": "2327",
+        "security_short_name": "國巨*",
+        "security_label": "國巨*（2327）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.85,
+        "thesis": "國巨*（2327）9月營收年增46.12%，本日漲4.73%，一張占淨值由14.8%升至15.5%。第二季負債占資產約64.73%，維持對獲利持續性與估值的要求。",
+        "invalidation_conditions": [
+          "持續獲利、現金流及估值支持該部位"
+        ],
+        "risk_flags": [
+          "負債占資產約64.73%",
+          "單張占淨值15.5%"
+        ]
+      },
+      {
+        "symbol": "2408",
+        "security_short_name": "南亞科",
+        "security_label": "南亞科（2408）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.85,
+        "thesis": "南亞科（2408）9月營收年增576.62%、月增0.90%，第二季營業利益為正。本日反彈6.24%，一張占淨值由約13.23%升至14.05%，前次比較基期與循環獲利疑問仍在。",
+        "invalidation_conditions": [
+          "比較基期及正常化獲利支持現價"
+        ],
+        "risk_flags": [
+          "週期獲利",
+          "單張占淨值14.05%"
+        ]
+      },
+      {
+        "symbol": "2317",
+        "security_short_name": "鴻海",
+        "security_label": "鴻海（2317）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.81,
+        "thesis": "鴻海（2317）9月營收年增38.42%、月增25.70%。前次市場普跌理由已緩解，本日個股仍跌1.90%，第二季營業利益率約3.67%。一張占淨值10.3%，先查成長轉化為現金流的情況。",
+        "invalidation_conditions": [
+          "利潤率、現金流和估值支持配置",
+          "營收或營業利益顯著轉弱"
+        ],
+        "risk_flags": [
+          "營業利益率約3.67%",
+          "本日相對弱勢"
+        ]
+      },
+      {
+        "symbol": "3711",
+        "security_short_name": "日月光投控",
+        "security_label": "日月光投控（3711）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.87,
+        "thesis": "日月光投控（3711）9月營收年增45.52%，本日漲5.47%，一張占淨值由22.85%升至24.1%。第二季負債占資產約60.87%，維持前次集中風險判斷。",
+        "invalidation_conditions": [
+          "營運現金流與估值足以支持單張曝險"
+        ],
+        "risk_flags": [
+          "單張約占四分之一淨值",
+          "負債占資產約60.87%"
+        ]
+      },
+      {
+        "symbol": "3653",
+        "security_short_name": "健策",
+        "security_label": "健策（3653）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "健策（3653）一張本金由前次632萬元降至368.5萬元，仍超出可用現金。9月營收年增79.97%、月減5.32%，維持觀望。",
+        "invalidation_conditions": [
+          "含費整張可負擔且新營運資料與估值支持配置"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "營收月減5.32%"
+        ]
+      },
+      {
+        "symbol": "3017",
+        "security_short_name": "奇鋐",
+        "security_label": "奇鋐（3017）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.97,
+        "thesis": "奇鋐（3017）9月營收年增44.92%，一張本金由前次309.5萬元降至236.5萬元，仍超出可用現金。本日漲7.26%。",
+        "invalidation_conditions": [
+          "含費整張可負擔且單張曝險及估值合理"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "單日波動大"
+        ]
+      },
+      {
+        "symbol": "3008",
+        "security_short_name": "大立光",
+        "security_label": "大立光（3008）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "大立光（3008）一張本金由前次367萬元降至362萬元，仍超出可用現金。9月營收月增15.31%、年減7.31%，維持觀望。",
+        "invalidation_conditions": [
+          "含費整張可負擔且營收年比改善"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "營收年減7.31%"
+        ]
+      },
+      {
+        "symbol": "3661",
+        "security_short_name": "世芯-KY",
+        "security_label": "世芯-KY（3661）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.99,
+        "thesis": "世芯-KY（3661）9月營收年增496.00%、累計年增44.59%。本日漲9.88%，一張本金由前次324萬元升至356萬元，資金缺口擴大。",
+        "invalidation_conditions": [
+          "含費整張可負擔且基期、獲利持續性及估值支持配置"
+        ],
+        "risk_flags": [
+          "收盤估算資金不足",
+          "單月與累計成長幅度差距大"
+        ]
+      },
+      {
+        "symbol": "8046",
+        "security_short_name": "南電",
+        "security_label": "南電（8046）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.9,
+        "thesis": "南電（8046）9月營收年增57.82%，第二季EPS 5.53元。一張占淨值由前次59.25%降至33.5%，集中度改善，仍暫緩建立三分之一淨值的單一部位。",
+        "invalidation_conditions": [
+          "單張曝險與估值共同支持配置"
+        ],
+        "risk_flags": [
+          "單張占淨值33.5%"
+        ]
+      },
+      {
+        "symbol": "3105",
+        "security_short_name": "穩懋",
+        "security_label": "穩懋（3105）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.86,
+        "thesis": "穩懋（3105）9月營收年增29.97%，本日漲7.22%，一張占淨值由前次19.05%升至20.43%，維持觀望。",
+        "invalidation_conditions": [
+          "持續獲利與估值支持承擔單張曝險"
+        ],
+        "risk_flags": [
+          "單張約占五分之一淨值",
+          "單日波動大"
+        ]
+      },
+      {
+        "symbol": "6274",
+        "security_short_name": "台燿",
+        "security_label": "台燿（6274）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.9,
+        "thesis": "台燿（6274）9月營收年增114.80%，本日漲9.95%，價格方向較前次轉強。一張占淨值由60.50%降至34.25%，仍選擇暫緩集中配置。",
+        "invalidation_conditions": [
+          "單張曝險下降或可持續獲利與估值足以支持該部位"
+        ],
+        "risk_flags": [
+          "單張超過三分之一淨值",
+          "單日大幅上漲"
+        ]
+      },
+      {
+        "symbol": "2368",
+        "security_short_name": "金像電",
+        "security_label": "金像電（2368）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.9,
+        "thesis": "金像電（2368）一張占淨值由前次53%降至39.1%。本日漲9.99%，9月營收年增55.46%、月減10.25%，仍需查核近期動能與大部位風險。",
+        "invalidation_conditions": [
+          "營收動能回穩且估值足以支持單張配置"
+        ],
+        "risk_flags": [
+          "單張占淨值39.1%",
+          "營收月減10.25%"
+        ]
+      },
+      {
+        "symbol": "2344",
+        "security_short_name": "華邦電",
+        "security_label": "華邦電（2344）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.83,
+        "thesis": "華邦電（2344）9月營收年增256.67%，第二季營業利益率約42.34%。本日漲7.06%，一張占淨值由4.46%升至4.78%。維持前次對正常化獲利的查核。",
+        "invalidation_conditions": [
+          "正常化獲利及估值支持配置",
+          "營收或營業利益明顯轉弱"
+        ],
+        "risk_flags": [
+          "週期獲利持續性待驗證",
+          "單日波動大"
+        ]
+      },
+      {
+        "symbol": "6213",
+        "security_short_name": "聯茂",
+        "security_label": "聯茂（6213）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.85,
+        "thesis": "聯茂（6213）9月營收年增110.74%、月增15.47%，本日漲9.99%。一張占淨值由前次32.80%降至19.55%，部位改善，先查獲利與估值能否支持配置。",
+        "invalidation_conditions": [
+          "多期獲利與估值支持單張曝險"
+        ],
+        "risk_flags": [
+          "單張接近五分之一淨值",
+          "單日大幅上漲"
+        ]
+      },
+      {
+        "symbol": "1802",
+        "security_short_name": "台玻",
+        "security_label": "台玻（1802）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.82,
+        "thesis": "台玻（1802）首次評估。9月營收年增34.11%，第二季EPS 0.64元。本日漲9.83%，一張占淨值2.91%，先查營收成長能否持續轉化為獲利。",
+        "invalidation_conditions": [
+          "多期本業獲利、現金流及估值支持配置"
+        ],
+        "risk_flags": [
+          "單日大幅上漲",
+          "獲利持續性待查"
+        ]
+      },
+      {
+        "symbol": "00981A",
+        "security_short_name": "主動統一台股增長",
+        "security_label": "主動統一台股增長（00981A）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.85,
+        "thesis": "主動統一台股增長（00981A）本日漲7.86%，一張本金由18,580元升至20,040元。廣度改善，前次主動持倉、費用及定價疑問仍在。",
+        "invalidation_conditions": [
+          "投資流程、持倉集中度、費用及折溢價支持配置"
+        ],
+        "risk_flags": [
+          "主動管理曝險未明",
+          "單日波動大"
+        ]
+      },
+      {
+        "symbol": "2345",
+        "security_short_name": "智邦",
+        "security_label": "智邦（2345）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.95,
+        "thesis": "智邦（2345）9月營收年增66.13%、月減1.16%。本日漲9.76%，一張占淨值由61.5%升至67.5%，前次集中風險加重。",
+        "invalidation_conditions": [
+          "整張曝險降低且估值支持配置"
+        ],
+        "risk_flags": [
+          "單張超過三分之二淨值",
+          "單日大幅反彈"
+        ]
+      },
+      {
+        "symbol": "4958",
+        "security_short_name": "臻鼎-KY",
+        "security_label": "臻鼎-KY（4958）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.82,
+        "thesis": "臻鼎-KY（4958）9月營收年增36.13%、月增27.54%。一張占淨值由前次24.35%降至16.58%，本日漲6.94%，待確認收入成長能否改善本業獲利及現金流。",
+        "invalidation_conditions": [
+          "後續利潤率、現金流及估值足以支持單張配置"
+        ],
+        "risk_flags": [
+          "整張占淨值16.58%",
+          "營收成長的獲利轉化待查"
+        ]
+      },
+      {
+        "symbol": "3081",
+        "security_short_name": "聯亞",
+        "security_label": "聯亞（3081）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.94,
+        "thesis": "聯亞（3081）一張本金由前次241.5萬元降至139萬元，收盤估算已可負擔。9月營收年增190.16%，本次因一張仍占淨值69.5%而觀望。",
+        "invalidation_conditions": [
+          "單張曝險降低且成長持續性與估值支持配置"
+        ],
+        "risk_flags": [
+          "單張占淨值69.5%",
+          "高成長持續性待查"
+        ]
+      },
+      {
+        "symbol": "8299",
+        "security_short_name": "群聯",
+        "security_label": "群聯（8299）",
+        "action": "HOLD",
+        "target_lots": 0,
+        "confidence": 0.95,
+        "thesis": "群聯（8299）9月營收年增370.26%，本日漲9.85%，一張占淨值由66%升至72.5%，前次集中風險加重。",
+        "invalidation_conditions": [
+          "整張曝險降低且正常化獲利與估值支持配置"
+        ],
+        "risk_flags": [
+          "單張占淨值72.5%",
+          "週期獲利待查"
+        ]
+      }
+    ],
+    "portfolio_summary": "11/24擬紙上買進元大台灣50（0050）1張，其餘候選觀望。市場廣度由普跌轉為上漲家數居多，以約4.35%淨值的小額被動台股曝險參與反彈，並為基金集中度與開盤價格的不確定性保留大部分現金。帳戶無持股可賣。",
+    "no_trade_reason": null
+  },
+  "watch_candidates": [
+    {
+      "rank": 1,
+      "symbol": "2303",
+      "security_short_name": "聯電",
+      "security_label": "聯電（2303）",
+      "observation_reason": "聯電（2303）9月營收年增27.22%、累計年增16.08%，第二季本業獲利為正，一張約占淨值4.42%。",
+      "missing_buy_conditions": [
+        "拆解稅前利益較營業利益增加的來源，核對經常性獲利及估值"
+      ],
+      "risk_flags": [
+        "單日反彈9.96%"
+      ],
+      "invalidation_conditions": [
+        "後續營收或本業獲利顯著轉弱"
+      ]
+    },
+    {
+      "rank": 2,
+      "symbol": "2344",
+      "security_short_name": "華邦電",
+      "security_label": "華邦電（2344）",
+      "observation_reason": "華邦電（2344）9月營收年增256.67%，第二季營業利益率約42.34%，一張占淨值約4.78%。",
+      "missing_buy_conditions": [
+        "核對可比基期及正常化獲利，確認現價有估值支撐"
+      ],
+      "risk_flags": [
+        "記憶體循環",
+        "單日漲7.06%"
+      ],
+      "invalidation_conditions": [
+        "後續營收或營業利益明顯轉弱"
+      ]
+    },
+    {
+      "rank": 3,
+      "symbol": "2317",
+      "security_short_name": "鴻海",
+      "security_label": "鴻海（2317）",
+      "observation_reason": "鴻海（2317）9月營收年增38.42%、月增25.70%，本日在市場反彈時仍跌1.90%，值得追蹤獲利與價格的分歧。",
+      "missing_buy_conditions": [
+        "檢驗利潤率、營運現金流與估值是否支持一張約10.3%的曝險"
+      ],
+      "risk_flags": [
+        "第二季營業利益率約3.67%"
+      ],
+      "invalidation_conditions": [
+        "後續營收成長與營業獲利同步轉弱"
+      ]
+    },
+    {
+      "rank": 4,
+      "symbol": "2408",
+      "security_short_name": "南亞科",
+      "security_label": "南亞科（2408）",
+      "observation_reason": "南亞科（2408）9月營收年增576.62%，第二季營業利益為正，適合與華邦電（2344）比較記憶體週期獲利。",
+      "missing_buy_conditions": [
+        "釐清比較基期、獲利持續性及正常化估值"
+      ],
+      "risk_flags": [
+        "單張約占淨值14.05%",
+        "與同產業標的曝險重疊"
+      ],
+      "invalidation_conditions": [
+        "新一期營收或營業利益顯示週期動能顯著反轉"
+      ]
+    },
+    {
+      "rank": 5,
+      "symbol": "1802",
+      "security_short_name": "台玻",
+      "security_label": "台玻（1802）",
+      "observation_reason": "台玻（1802）9月營收年增34.11%、月增8.18%，一張約占淨值2.91%，提供電子產業以外的研究選項。",
+      "missing_buy_conditions": [
+        "確認營收成長轉化為可持續的本業獲利與現金流，並核對估值"
+      ],
+      "risk_flags": [
+        "單日漲9.83%"
+      ],
+      "invalidation_conditions": [
+        "營收改善消退或本業獲利顯著下滑"
+      ]
+    }
+  ],
+  "analysis": {
+    "market": "11/23封存掃描顯示1,217檔上漲、619檔下跌、134檔持平，上漲占1,970檔交易標的約61.8%。11/20僅66檔上漲、1,881檔下跌。成交值由約8,094億元增至約1兆1,167億元，增約38.0%。上市產業24與28平均分別漲3.72%與3.28%。封存加權股價報酬指數由1,546,269升至1,579,680，約漲2.16%，仍低於11/19的1,648,984。廣度與成交同步回升，反彈延續性待後續交易日驗證。",
+    "portfolio": "11/23現金、可用現金與淨值均為200萬元。持股、保留款、應收、應付、待成交委託和持股承諾均為零，封存報酬及回撤均為0%。元大台灣50（0050）一張按87元收盤估算，本金87,000元，按0.1425%估計手續費約124元，合計約87,124元，剩餘現金約191.29萬元。上述僅為部位與成本估算。前週五個交易日僅一日形成決策，零成交，樣本不足以評估策略成效。",
+    "financial": "28檔股票有封存9月營收及第二季財務。台積電（2330）9月營收年增54.65%，第二季營業利益率約59.29%，惟按收盤估一張本金已超出現金。聯電（2303）與南亞（1303）的獲利項目差距需查明來源。華邦電（2344）與南亞科（2408）營收成長強，估值宜以多期及正常化獲利檢驗。兩檔ETF依投資策略、成分曝險、費用與定價評估。",
+    "risk": "主要風險是反彈後的開盤跳空、電子股曝險重疊與整張造成的集中度。按收盤估算，群聯（8299）、聯亞（3081）及智邦（2345）單張約占淨值72.5%、69.5%及67.5%。現行策略門檻與配置限額未強制執行，以上權重作為配置判斷。11/23官方日終行情與商品分類約23:12封存，屬各自的當日官方資料例外，兩者均可能含18:30後修訂。公司事件採有限偵測，若發現帳務疑慮，相關績效須待查。",
+    "next_session_plan": "11/24僅以正式開盤契約評估元大台灣50（0050）紙上買進1張。核對執行日商品資格、交易狀態、官方開盤價、整張數量、含費可用資金與帳務。必要證據或硬性檢查未通過時不成交，也不得以後續價格補成交。後續獨立研究優先核對基金成分權重、折溢價與追蹤表現，並觀察反彈廣度能否延續。",
+    "data_gaps": [
+      "封存股票營收僅到2026年9月，財務僅到第二季。較新營運、現金流與多期估值資料未提供。",
+      "元大台灣50（0050）與主動統一台股增長（00981A）缺成分權重、折溢價及費用資料。另缺前者追蹤表現與後者持倉及投資流程明細。",
+      "缺完整的多日還原價格、波動與產業曝險序列。",
+      "官方公告覆蓋限所供上市標的且為部分歷史，本包無已驗證公告。",
+      "11/23日終行情與分類的18:30精確版本未證明。11/24官方開盤價與執行日資格須依正式成交證據核驗。"
+    ]
+  }
 }
